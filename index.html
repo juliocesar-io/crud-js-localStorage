@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Perritos</title>
+        <script type="text/javascript" src="jquery-2.1.4.min.js">
+
+        </script>
+    </head>
+    <body>
+
+        <h2>Ingresa tu perrito</h2>
+
+        <form id="perritos-form">
+
+            <input id="nombre" type="text" name="nombre" placeholder="Ingresa el nombre del perrito">
+            <input type="radio" name="genero" value="hembra"> Hembra <br>
+            <input type="radio" name="genero" value="macho"> Macho! <br>
+            <input id="fecha_nacimiento" type="date" name="fecha_nacimiento"> <br>
+            <input id="color" type="color" name="color"> <br>
+            <select id="raza" name="raza">
+                <option default selected>Seleccione una raza</option>
+                <option value="pitbull"> Pitbull </option>
+                <option value="salchicha"> Salchicha </option>
+                <option value="dalmata"> Dálmata </option>
+            </select>
+            <br>
+            <input id="codigo" placeholder="ID del perrito" type="text" name="codigo" pattern="[A-Za-z]{3}" title="Debe ser de 3 letras">
+            <br>
+            <input type="submit" value="Enviar">
+
+        </form>
+
+
+    </body>
+    <script type="text/javascript" src="funciones.js">
+
+    </script>
+</html>
