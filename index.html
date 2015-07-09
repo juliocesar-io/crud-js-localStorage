@@ -2,38 +2,52 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Perritos</title>
-        <script type="text/javascript" src="jquery-2.1.4.min.js">
-
-        </script>
+        <title>CRUD demo js</title>
+        <link rel="stylesheet" href="estilos.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     </head>
-    <body>
 
-        <h2>Ingresa tu perrito</h2>
+    <body class="container">
+        <div class="mensaje-alerta">
+        </div>
 
-        <form id="perritos-form">
+        <div class="jumbotron row ">
+            <h2> Finca Secbi <small>Gestión de vacas</small></h2>
 
-            <input id="nombre" type="text" name="nombre" placeholder="Ingresa el nombre del perrito">
-            <input type="radio" name="genero" value="hembra"> Hembra <br>
-            <input type="radio" name="genero" value="macho"> Macho! <br>
-            <input id="fecha_nacimiento" type="date" name="fecha_nacimiento"> <br>
-            <input id="color" type="color" name="color"> <br>
-            <select id="raza" name="raza">
-                <option default selected>Seleccione una raza</option>
-                <option value="pitbull"> Pitbull </option>
-                <option value="salchicha"> Salchicha </option>
-                <option value="dalmata"> Dálmata </option>
-            </select>
-            <br>
-            <input id="codigo" placeholder="ID del perrito" type="text" name="codigo" pattern="[A-Za-z]{3}" title="Debe ser de 3 letras">
-            <br>
-            <input type="submit" value="Enviar">
 
-        </form>
+            <div class="col-md-6">
+                <hr>
+                    <p class="modo"> <span class="glyphicon glyphicon-plus"></span>Agregar vaca</p>
+                <form id="vacas-form">
+                    <input  class="form-control" type="text" id="nombre" placeholder="Nombre">
+                    <input  class="form-control" type="email" id="correo" placeholder="Correo de la vaca">
+                    <input  class="form-control" type="number" id="peso" placeholder="Peso en kg">
+                    <input  class="form-control" type="date" id="fecha_nacimiento" placeholder="Fecha de nacimiento">
+                    <br>
+                    <input type="submit" class="btn btn-success" value=" Guardar">
+                </form>
+                <br>
+                <br>
+                <div id="numeroVacas">
 
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <img style=" width:100%" src="vaca.jpg" alt="" />
+            </div>
+
+        </div>
+
+
+        <br>
+        <br>
+        <table class="table" id="dbVacas-list">
+
+        </table>
 
     </body>
-    <script type="text/javascript" src="funciones.js">
-
-    </script>
+    <script type="text/javascript" src="funciones.js"></script>
 </html>
