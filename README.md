@@ -52,6 +52,13 @@ $("#vacas-form").bind("submit", function() {
 });
 ```
 
+### Estilos
+
+Referencias a clases de Bootstrap `container` y `col-md-x`
+
+### Arquitectura
+
+![Arquitectura js-localSotrage](http://i.imgur.com/e4522ym.png)
 
 
 ### Ejercicios
