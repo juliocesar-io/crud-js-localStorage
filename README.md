@@ -14,7 +14,7 @@ Presentaciones anteriores:
 Debemos crear una instancia en el localStorage donde se guardarán literalmente un **string**. Para poder hacer el intercambio entre objeto **JSON** y string usaremos las funciones `stringify` y `parse` y en un array tendremos disponibles siempre la colección del los objetos para poderlos iterar.
 
 
-```
+```js
 var dbVacas = localStorage.getItem("dbVacas"); //Obtener datos de localStorage
 dbVacas = JSON.parse(dbVacas); // Covertir a objeto
 if (dbVacas === null) // Si no existe, creamos un array vacio.
@@ -40,7 +40,7 @@ var operacion = "A"; //"A"=agregar; "E"=edtidar
 ```
 
 Luego esperamos por un evento usando Jquery y mandamos a la funcion en cuestión.
-```
+```js
 // Esperar el evento de envio del formulario !!
 $("#vacas-form").bind("submit", function() {
     debugger;
@@ -61,11 +61,16 @@ Referencias a clases de Bootstrap `container` y `col-md-x`
 ![Arquitectura js-localSotrage](http://i.imgur.com/e4522ym.png)
 
 
+### Mockups
+
+![Mockups](http://i.imgur.com/OkZ5nMS.png)
+
+
 ### Ejercicios
 
 - Aclaración sobre comparadores lógicos
 
-```
+```js
 0 == false;   // true
 0 === false;  // false, por que son de tipo diferente
 1 == "1";     // true, Coversión automatica solamente para el valor
@@ -80,7 +85,7 @@ null === undefined; // false
 > Dentro del bucle, si x es par,  mostrar x y "par" en la consola.
 si x es impar, mostrar X e "impar" en la consola.
 
-```
+```js
 
 for (var i = 0; i < 10; i++) {
     if (i % 2 === 0 ) {
@@ -93,7 +98,7 @@ for (var i = 0; i < 10; i++) {
 
 > Objeto Javascript
 
-```
+```js
 
 var SemilleroSecbi = {
   url: "http://secbi.co",
@@ -112,7 +117,7 @@ var SemilleroSecbi = {
 ```
 > Más de un integrante ? Un objeto dentro de un objeto? , usamos arrays.
 
-```
+```js
 var SemilleroSecbi = {
   url: "http://secbi.co",
 
@@ -131,7 +136,7 @@ var SemilleroSecbi = {
 ```
 > Operaciones con arrays
 
-```
+```js
 // Array Original
 var array = ["uno", "dos", "cuatro"];
 // splice(position, numberOfItemsToRemove, item)
@@ -143,6 +148,6 @@ array;  // ["uno", "dos", "tres", "cuatro"]
 
 > Como limpiar el localStorage ?
 
-```
+```js
 localStorage.clear();
 ```
